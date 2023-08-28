@@ -11,6 +11,9 @@ app = FastAPI()
 app.include_router(router, prefix="/images")
 
 
+# For the folowing test, note that we will mock the entire function that houses all the calls to sentinelsat
+# An alternative approach would be to mock out each individual call and the very specific response formats,
+# but that's a bit brittle and cumbersome.
 @patch("app.routers.images.get_image_from_sentinelsat")
 async def test_get_image_should_return_retrieved_image_from_external_service(
     mock_get_image, client
