@@ -74,6 +74,10 @@ In addition to manual testing, you can also run all the automated tests, and to 
 
 ### What's missing
 
+We only have 3 endpoints right now, and they're rather simple, so almost all the logic lives under the
+`routes/images.py` file. That's okay for now, but as our application grows we should probably split out
+the request handling logic (view layer for us) and the domain specific logic (maybe the controller layer).
+
 We only have a few tests per endpoint to showcase how we can write tests for this project, however we should have a 
 lot more when trying to make this project production ready - we should aim to cover as many edge cases as we can around
 errors that can happen, invalid inputs etc.
