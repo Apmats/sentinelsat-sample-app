@@ -1,0 +1,26 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+sentinelsat = "*"
+fastapi = "*"
+sqlmodel = "*"
+psycopg2-binary = "*"
+python-dateutil = "*"
+pillow = "*"
+numpy = "*"
+pytest = "*"
+httpx = "*"
+pydantic = {extras = ["dotenv"], version = "*"}
+python-multipart = "*"
+testcontainers-postgres = "*"
+asyncpg = "*"
+anyio = "*"
+
+[dev-packages]
+black = "*"
+
+[requires]
+python_version = "3.10"

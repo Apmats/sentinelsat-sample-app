@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:80"
+    volumes:
+      - ./images:/images
+    depends_on:
+      - db
+    env_file:
+      - .env
+
+  db:
+    image: postgres:14
+    environment:
+      POSTGRES_DB: db123
+      POSTGRES_USER: user123
+      POSTGRES_PASSWORD: pass123
